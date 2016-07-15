@@ -45,18 +45,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\AI.cs" />
      <Compile Include="Assets\Script\BallEvent.cs" />
      <Compile Include="Assets\Script\GoalCollision.cs" />
      <Compile Include="Assets\Script\Player.cs" />
      <Compile Include="Assets\Script\TestController.cs" />
      <Compile Include="Assets\Script\WallRInit.cs" />
+     <Compile Include="Assets\SkillScript\Frozen.cs" />
      <Compile Include="Assets\UIScript\BackButton.cs" />
+     <Compile Include="Assets\UIScript\CompleteClick.cs" />
+     <Compile Include="Assets\UIScript\ExitButton.cs" />
      <Compile Include="Assets\UIScript\ForwardButton.cs" />
      <Compile Include="Assets\UIScript\GameInit.cs" />
+     <Compile Include="Assets\UIScript\GoalAudio.cs" />
+     <Compile Include="Assets\UIScript\InfoButton.cs" />
      <Compile Include="Assets\UIScript\InitUI.cs" />
+     <Compile Include="Assets\UIScript\PlayerSettingInit.cs" />
      <Compile Include="Assets\UIScript\PointShow.cs" />
      <Compile Include="Assets\UIScript\ResultScript.cs" />
      <Compile Include="Assets\UIScript\SettingClick.cs" />
+     <Compile Include="Assets\UIScript\SettingData.cs" />
+     <Compile Include="Assets\UIScript\SettingPanelInit.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Unity5.3.4/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

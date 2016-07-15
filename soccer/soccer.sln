@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{DA443A0A-D979-D553-0DF3-8CA1A74E4F80}") = "soccer", "Assembly-CSharp.csproj", "{905933C0-3B90-1E54-B1D6-A80BF3B7F277}"
 EndProject
+Project("{DA443A0A-D979-D553-0DF3-8CA1A74E4F80}") = "soccer", "Assembly-CSharp-Editor.csproj", "{3283D57F-21A1-8565-12D9-0ECF8EA99CA8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{905933C0-3B90-1E54-B1D6-A80BF3B7F277}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{905933C0-3B90-1E54-B1D6-A80BF3B7F277}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{905933C0-3B90-1E54-B1D6-A80BF3B7F277}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3283D57F-21A1-8565-12D9-0ECF8EA99CA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3283D57F-21A1-8565-12D9-0ECF8EA99CA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3283D57F-21A1-8565-12D9-0ECF8EA99CA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3283D57F-21A1-8565-12D9-0ECF8EA99CA8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

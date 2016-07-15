@@ -36,6 +36,8 @@ public class ForwardButton : MonoBehaviour, IPointerUpHandler, IPointerDownHandl
 
 	// Update is called once per frame
 	void Update () {
+		if (player != null && player.GetComponent<Player> ().AI)
+			return;
 		if (PressDown) {
 			player.GetComponent<Player> ().state = 0;
 		}
@@ -49,6 +51,8 @@ public class ForwardButton : MonoBehaviour, IPointerUpHandler, IPointerDownHandl
 	}
 
 	public void OnPointerUp(PointerEventData eventData) {
+		if (player.GetComponent<Player> ().AI)
+			return;
 		if (player != null) {
 			player.GetComponent<Player> ().state = playerLastState * -1;
 			PressDown = false;

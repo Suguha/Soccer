@@ -19,16 +19,16 @@ public class WallRInit : MonoBehaviour {
 				t.gameObject.GetComponent<Player> ().force = true;
 			}
 			if (transform.gameObject.name == "WallU") {
-				t.gameObject.GetComponent<Rigidbody> ().AddForce (0, 0, -500);
+				t.gameObject.GetComponent<Rigidbody> ().AddForce (0, 0, -500 * t.gameObject.GetComponent<Rigidbody> ().mass);
 			}
 			if (transform.gameObject.name == "WallD") {
-				t.gameObject.GetComponent<Rigidbody> ().AddForce (0, 0, 500);
+				t.gameObject.GetComponent<Rigidbody> ().AddForce (0, 0, 500 * t.gameObject.GetComponent<Rigidbody> ().mass);
 			}
 			if (transform.gameObject.name == "WallL") {
-				t.gameObject.GetComponent<Rigidbody> ().AddForce (500, 0, 0);
+				t.gameObject.GetComponent<Rigidbody> ().AddForce (500 * t.gameObject.GetComponent<Rigidbody> ().mass, 0, 0);
 			}
 			if (transform.gameObject.name == "WallR") {
-				t.gameObject.GetComponent<Rigidbody> ().AddForce (-500, 0, 0);
+				t.gameObject.GetComponent<Rigidbody> ().AddForce (-500 * t.gameObject.GetComponent<Rigidbody> ().mass, 0, 0);
 			}
 		}
 	}

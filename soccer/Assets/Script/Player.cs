@@ -2,31 +2,38 @@
 using System.Collections;
 
 public class Player : MonoBehaviour {
-	public GameObject player;
-	public float rotateSpeed;
-	public float runSpeed;
+	/// <summary>
+	/// The player basic data.
+	/// </summary>
+	public int rotateSpeed;
+	public int runSpeed;
+
 	public int state;
-	public bool force = false;
+	public bool force;
+	public bool frozen;
+	public bool AI = false;
 	// Use this for initialization
 	void Start () {
-		rotateSpeed = 1f;
-		runSpeed = 20f;
+		//GetComponent<MeshRenderer> ().materials [0] = Resources.Load ("/Material/PlayerSkin" + skin.ToString ()) as Material;
 		state = 1;
 	}
-	
+	void OnEnable() {
+		force = false;
+		frozen = false;
+	}
 	// Update is called once per frame
 	void Update () {
-		if (state == 0 && force == false) {
-			player.GetComponent<Rigidbody> ().AddForce (transform.forward * runSpeed);
-		} else if (force == false) {
+		if (state == 0 && force == false && frozen == false) {
+			GetComponent<Rigidbody> ().AddForce (transform.forward * runSpeed * GetComponent<Rigidbody> ().mass);
+		} else if (force == false && frozen == false) {
 			rotate (state);
 		} else {
 		}
 	}
 
 	void rotate(int s){
-		Vector3 r = player.transform.rotation.eulerAngles;
+		Vector3 r = transform.rotation.eulerAngles;
 		r.y += rotateSpeed * s;
-		player.transform.rotation = Quaternion.Euler (r);
+		transform.rotation = Quaternion.Euler (r);
 	}
 }
